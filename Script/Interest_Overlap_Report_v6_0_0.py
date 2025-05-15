@@ -1,8 +1,8 @@
 '''
 Tool name: Interest Overlap Report (IOR)
-Developer: Mike MacRae for the Ministry of Energy, Mines and Low Carbon Innovation
+Developer: Mike MacRae for the Ministry of Mines and Critical Minerals
 Contact: michael.macrae@gov.bc.ca or mineral.titles@gov.bc.ca
-Date: Developed March 2014. Updated November 2023
+Date: Developed March 2014. Updated May 2025
 '''
 
 # Import required modules
