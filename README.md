@@ -101,3 +101,17 @@ Known Limitations
 - the path or name must be IDENTICAL, accounting for capitalization, spelling and special characters (underscores, periods, etc) as seen in ArcCatalogue. Best practice is to copy and paste path names and files names directly from the ‘Location’ toolbar and into the spreadsheet
 - Definition Query must be INDENTICAL as it appears in the layers property dialogue box in ArcMap. Please build Definition Query in ArcMap layers property, validate and copy and paste directly from ArcMap into the spreadsheet
 - Field names must be IDENTICAL, accounting for capitalization, spelling and special characters (underscores, periods, etc) as seen in ArcCatalogue. Best practice is to copy and paste field names from the feature class properties Fields tab, by right clicking on the feature class in ArcCatalogue
+
+**Adding the tool to ArcMap/Catalogue**
+
+1.	Open ArcToolbox with ArcMap/Catalogue/Pro
+2.	Right click on the ‘ArcToolBox’ heading and ‘Add Toolbox...’
+3.	Navigate to the following location and add the ‘MTB_Tools’ toolbox: \\spatialfiles.bcgov\Work\em\vic\mtb\Local\MTB_Scripts\MTB_Tools.tbx
+
+**Running the tool**
+
+1.	Open MTB_Tools.tbx\Reporting_Tools\Interest_Overlap_Tools\Interest Overlap Report
+3.	Enter the parameters for the tool (See below)
+4.	Run the tool
+
+The following is a screengrab of the tools dialogue box:
