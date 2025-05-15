@@ -219,7 +219,7 @@ def processAOI(AOI, output_folder, scratchGDB):
         
     processedAOI_Hectares = round(AOI_Area/10000, 2)
     
-    if arcpy.Describe(processedAOI).spatialReference.factoryCode <> 3005:
+    if arcpy.Describe(processedAOI).spatialReference.factoryCode != 3005:
         
         arcpy.AddMessage("Re-projecting to BC Albers (WKID: 3005)...")
         
@@ -621,7 +621,7 @@ def initializeSpreadsheet():
     # Initialize a workbook within excel
     book = excel.Workbooks.Add()
     
-    if book.Sheets.Count <> 4:
+    if book.Sheets.Count != 4:
         for i in range(book.Sheets.Count, 4):
             arcpy.AddMessage(i)
             book.Sheets.Add()
@@ -863,7 +863,7 @@ def createSummarySheet(book, excel, processedAOI, processedAOI_Hectares, collect
         
     sheetCells(sheet, excelrow, excelcol, "AREA OF INTEREST INFORMATION", 10, bold=True, underline=True)
     
-    if geoMark_URL <> '':
+    if geoMark_URL != '':
         sheetCells(sheet, excelrow, excelcol + 1, '=HYPERLINK("{0}","{1}")'.format(geoMark_URL, 'Area of Interest GeoMark Link'), 10, False, False, True, None)
 
     staticexcelrow = excelrow
