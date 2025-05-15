@@ -21,7 +21,7 @@ This tool will run an overlap report to determine if different land use types (l
 -	Master Layer File Excel Spreadsheet: \\spatialfiles.bcgov\Work\em\vic\mtb\Local\MTB_Scripts\MTB_Tools\Reporting_Tools\Interest_Overlap_Report\Excel_Spreadsheets\InterestReport_Layer_List_MASTER.xlsx
 
 
-Known Limitations
+**Known Limitations**
 
 -	Input: 
     -	Area of Interest Input must be a polygon file (it does not support line or point features at this time). If using a line or point file, create buffer of the feature and use the buffer polygon as the input.
@@ -114,4 +114,28 @@ Known Limitations
 3.	Enter the parameters for the tool (See below)
 4.	Run the tool
 
-The following is a screengrab of the tools dialogue box:
+**IOR Parameters**
+
+- **Area of Interest Parameters**:
+    - **Select Area of Interest Polygon**: Enter a feature class or shapefile polygon of the area of interest being analyzed
+    - **Query Input Area of Interest File (optional)**: Add a query to the AOI used in the first parameter. The tool will only work on one feature (row) from the polygon. The paramter will enable itelf when the AOI has more than one feature.
+    - **Area of Interest Field List (optional)**: A list of fields from the AOI. Choose which fields to be used in the report in the Sumamry sheet.
+
+        <img src="Image/IOR1.JPG" alt="Logo" width="600"/>
+
+- **Layer Parameters**:
+    - **Pre-defined Layer Lists**: Choose a list of pre-defined layers. This option will update the **Layers to Include in Overlap Analysis** parameter.
+    - **Layers to Include in Overlap Analysis**: A list of layers analyzed for the report. The layer cna be updated manually by toggling checkmarks or by using the **Pre-defined Layer Lists** parameter.
+ 
+        <img src="Image/IOR2.JPG" alt="Logo" width="600"/>
+
+- **Output and Credential Parameters**:
+    - **Output Geodatabase Location**: Set a folder location to store the geodatabse created by the tool which stores geoprocessed data. This is optional and if not set, the geodatabase will be stored in the Interest_Overlap_Report\Interim_Files folder and will be overwritten each time the tool is run.
+    - Report Output Location: THe folder location where the report will be saved.
+    - Report Name: The name of the report. The report name will be concatenated to the following: "Interest_Report + report name + date" (i.e. Interest_Report_Gizzly_Bear_Habitat_2025May26)
+    - IDIR Username: Enter your IDIR username. This will be automatically populated if you are logged into the computer with your IDIR
+    - MTOPROD Password: Enter your Mineral Titles Online database password
+    - BCGW Password: Enter your BC Geographic Warehouse database password
+    - Create Geomark: Enable to create a Geomark of the AOI.
+
+        <img src="Image/IOR3.JPG" alt="Logo" width="600"/>
