@@ -724,11 +724,6 @@ def createInterestReportSheet(book, layerListDict, appsDict, output_folder):
         for Fclass, listItems in values:
             
             arcpy.AddMessage("      Writing detail information from " + str(Fclass) + " layer...")
-
-            arcpy.AddMessage("      FClass: " + str(Fclass))
-            arcpy.AddMessage("      Listitems: " + str(listItems))
-            arcpy.AddMessage("      Listitems[1]: " + str(listItems[1]))
-            arcpy.AddMessage("      Excelrow: " + str(excelrow))
             
             if listItems[1] != 'None':
                 sheetCells(sheet, excelrow, excelcol, '=HYPERLINK("{0}","{1}")'.format(listItems[1], Fclass), 10, False, False, True, None)
@@ -737,8 +732,7 @@ def createInterestReportSheet(book, layerListDict, appsDict, output_folder):
             else:
                 sheetCells(sheet, excelrow, excelcol, Fclass, 10, True, False, False, None)
                 crossReferenceDict[Fclass] = excelrow
-            
-            arcpy.AddMessage("crossReferenceDict: " + str(crossReferenceDict))
+
             
             if listItems[0] != 'No Overlap Found':
 
@@ -896,6 +890,8 @@ def createSummarySheet(book, excel, processedAOI, processedAOI_Hectares, collect
         
         # Loop over the field list from the fields chosen by the user
         for shField in shFieldList:
+            
+            arcpy.AddMessage(shField)
             
             excelrow += 1
 
