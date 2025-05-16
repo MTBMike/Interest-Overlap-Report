@@ -891,8 +891,6 @@ def createSummarySheet(book, excel, processedAOI, processedAOI_Hectares, collect
         # Loop over the field list from the fields chosen by the user
         for shField in shFieldList:
             
-            arcpy.AddMessage(shField)
-            
             excelrow += 1
 
             # Add each field name in the first column under the image and do some formatting               
